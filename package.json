@@ -64,5 +64,6 @@
     "prisma",
     "yoga"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
