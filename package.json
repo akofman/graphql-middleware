@@ -9,7 +9,7 @@
   },
   "author": "Matic Zavadlal <matic.zavadlal@gmail.com>",
   "dependencies": {
-    "graphql-tools": "^4.0.5"
+    "graphql-tools": "^5.0.0"
   },
   "devDependencies": {
     "@types/graphql": "^14.2.3",
@@ -31,7 +31,7 @@
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "graphql": "^0.12.0 || ^0.13.0 || ^14.0.0"
+    "graphql": "^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0"
   },
   "scripts": {
     "clean": "rimraf dist",
