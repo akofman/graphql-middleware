@@ -1,5 +1,5 @@
 import { GraphQLSchema } from 'graphql'
-import { addResolveFunctionsToSchema } from 'graphql-tools'
+import { mergeSchemas } from 'graphql-tools'
 import {
   IApplyOptions,
   IMiddleware,
@@ -39,15 +39,10 @@ export function addMiddlewareToSchema<TSource, TContext, TArgs>(
 
   const fragmentReplacements = extractFragmentReplacements(resolvers)
 
-  addResolveFunctionsToSchema({
-    schema,
-    resolvers,
-    resolverValidationOptions: {
-      requireResolversForResolveType: false,
-    },
-  })
-
-  return { schema, fragmentReplacements }
+  return { schema: mergeSchemas({
+    schemas: [ schema ],
+    resolvers
+  }), fragmentReplacements }
 }
 
 /**
